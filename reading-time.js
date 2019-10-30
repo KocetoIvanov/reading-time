@@ -16,7 +16,6 @@
         readingTimeDuration,
         readingTimeSeconds;
             
-
     /**
      *  Contructor
      *
@@ -43,7 +42,7 @@
         }
 
         // Add 'Reading time:' label
-        document.querySelector(".reading-time-label").innerHTML = readigTimeLabel;
+        document.querySelector(".reading-time__label").innerHTML = readigTimeLabel;
 
         //split text by spaces to define total words
         totalWords = count;
@@ -60,16 +59,16 @@
         // define remaining reading time seconds
         readingTimeSeconds = Math.round(totalReadingTimeSeconds - (readingTimeDuration * 60));
 
-        document.querySelector(".wordCount").innerHTML = '(' + totalWords + ' ' + wordsLabel + ')';
+        document.querySelector(".reading-time__word-count").innerHTML = '(' + totalWords + ' ' + wordsLabel + ')';
 
         if (readingTimeDuration > 0) {
             if (readingTimeSeconds > 30) {
                 readingTimeDuration = readingTimeDuration + 1
-                document.querySelector("#readTime .duration").innerHTML = readingTimeDuration + ' ' + minutesLabel;
+                document.querySelector(".reading-time__duration").innerHTML = readingTimeDuration + ' ' + minutesLabel;
             } 
-            document.querySelector("#readTime .duration").innerHTML = readingTimeDuration + ' ' + minutesLabel;
+            document.querySelector(".reading-time__duration").innerHTML = readingTimeDuration + ' ' + minutesLabel;
         } else {
-            document.querySelector("#readTime .duration").innerHTML = lessThanAMinuteLabel;
+            document.querySelector(".reading-time_duration").innerHTML = lessThanAMinuteLabel;
         }
     }
 
@@ -82,10 +81,10 @@
 /**
 * Example usage
 * 
-* <div id="readTime">
-*   <span class="reading-time-label"></span>
-*   <span class="duration"></span>
-*   <span class="wordCount"></span>
+* <div class="reading-time">
+*   <span class="reading-time__label"></span>
+*   <span class="reading-time__duration"></span>
+*   <span class="reading-time__word-count"></span>
 *  </div>
 *
 * <article class="detail-wrapper">
