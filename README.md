@@ -1,5 +1,4 @@
-# reading-time
-Reading Time library with Pure Javascript
+# Reading Time library with Pure Javascript
 
 Code:
 ```
