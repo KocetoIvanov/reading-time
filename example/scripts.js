@@ -69,7 +69,7 @@
             } 
             document.querySelector(".reading-time__duration").innerHTML = readingTimeDuration + ' ' + minutesLabel;
         } else {
-            document.querySelector(".reading-time_duration").innerHTML = lessThanAMinuteLabel;
+            document.querySelector(".reading-time__duration").innerHTML = lessThanAMinuteLabel;
         }
     }
 
