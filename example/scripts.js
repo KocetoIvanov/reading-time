@@ -28,7 +28,7 @@
      */
 
 
-    function ReadingTime(numberWordsPerMinute, readigTimeLabel, minutesLabel, wordsLabel, lessThanAMinuteLabel) {
+    function ReadingTime(numberWordsPerMinute, readingTimeLabel, minutesLabel, wordsLabel, lessThanAMinuteLabel) {
 
         const wordsPerMinute = numberWordsPerMinute;
         // Select all the paragraphs in element with ID readText.
@@ -44,6 +44,7 @@
 
         // Add 'Reading time:' label
         document.querySelector(".reading-time__label").innerHTML = readigTimeLabel;
+        document.querySelector(".reading-time__label").innerHTML = readingTimeLabel;
 
         //split text by spaces to define total words
         totalWords = count;
